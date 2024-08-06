@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        /*1.Desarrolle un algoritmo que permita leer tres valores y almacenarlos en las variables A, B y C respectivamente.
+         El algoritmo debe imprimir cual es el mayor y cual es el menor. Recuerde constatar que los tres valores introducidos 
+         por el teclado sean valores distintos. Presente un mensaje de alerta en caso de que se detecte la introducción 
+         de valores iguales.*/
+
+        Scanner pruebascanner = new Scanner(System.in);
+        System.out.println("LEER VALORES EN LAS VARIABLES A,B,C\n");
+        System.out.println("Por favor ingrese el valor de la variable 'A' ");
+        int a = pruebascanner.nextInt();
+        System.out.println("Por favor ingrese el valor de la variable 'B' ");
+        int b = pruebascanner.nextInt();
+        System.out.println("Por favor ingrese el valor de la variable 'C' ");
+        int c = pruebascanner.nextInt();
+
+        if (a == b && a == c && b == c) {
+            System.out.println("Los valores ingresados son iguales");
+        } else if (a > b && a > c) {
+            System.out.println("El valor de A es mayor");
+            if (b < c) {
+                System.out.println("El valor de B es menor");
+            } else {
+                System.out.println("El valor de C es menor");
+            }
+        } else if (b > a && b > c) {
+            System.out.println("El valor de B es mayor");
+            if (a > c) {
+                System.out.println("El valor de A es menor");
+
+            } else {
+                System.out.println("El valor de C es menor");
+            }
+        } else {
+            System.out.println("El valor de C es mayor");
+            if (b < a) {
+                System.out.println("El valor de B es menor");
+            } else {
+                System.out.println("el valor de A es menor");
+            }
+
+        }
+    }
+}
